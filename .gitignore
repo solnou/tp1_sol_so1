@@ -1,0 +1,31 @@
+# Exclude build and external directories
+/build/
+/external/
+
+# Exclude cache files
+.cache/
+
+# Exclude IDE directories
+.vscode/
+.idea/
+
+# Exclude environment variables and virtual environments
+.env
+venv/
+
+# Exclude SonarQube scanner files
+.scannerwork/
+
+# Exclude kernel module compile results
+*.mod*
+*.cmd
+.tmp_versions/
+
+# Exclude object files, executables, and shared libraries
+*.o
+*.exe
+*.out
+*.a
+*.so
+
+
