@@ -1,0 +1,3 @@
+[submodule "lib/so-i-24-solnou"]
+	path = lib/so-i-24-solnou
+	url = https://github.com/ICOMP-UNC/so-i-24-solnou.git
