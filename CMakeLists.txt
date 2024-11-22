@@ -13,10 +13,6 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 include(../../build/Release/generators/conan_toolchain.cmake)
-# Add subdirectories
-add_subdirectory(lib/prometheus-client-c/prom)
-add_subdirectory(lib/prometheus-client-c/promhttp)
-
 
 # Incluir directorios de encabezados
 include_directories(${CMAKE_SOURCE_DIR}/include)
