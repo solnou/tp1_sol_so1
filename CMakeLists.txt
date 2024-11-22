@@ -19,6 +19,10 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 include_directories(${CONAN_INCLUDE_DIRS}) 
 
+# Añadir subdirectorios
+add_subdirectory(lib/prometheus-client-c/prom)
+add_subdirectory(lib/prometheus-client-c/promhttp)
+
 # Añadir el ejecutable
 add_executable(tp1_sol_so1
     src/main.c
@@ -27,7 +31,7 @@ add_executable(tp1_sol_so1
     src/write_json.c
 )
 
-add_library( tp1_sol_so1_lib STATIC
+add_library(tp1_sol_so1_lib STATIC
     src/metrics.c
     src/expose_metrics.c
     src/write_json.c
@@ -40,9 +44,6 @@ add_library( tp1_sol_so1_lib STATIC
 link_directories(/usr/local/lib)
 
 target_link_libraries(tp1_sol_so1 PRIVATE tp1_sol_so1_lib)
-
-
-find_package(cJSON REQUIRED)
 
 # Vincular las librerías libprom y libpromhttp desde /usr/local/lib
 target_link_libraries(tp1_sol_so1_lib
